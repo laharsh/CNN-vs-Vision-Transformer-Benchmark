@@ -1,0 +1,34 @@
+{
+  "benchmark_summary": {
+    "total_models_tested": 2,
+    "models": [
+      "CNN",
+      "ViT-small"
+    ],
+    "benchmark_date": "2025-10-07 18:08:29"
+  },
+  "performance_comparison": {
+    "CNN": {
+      "final_test_accuracy": 63.47155448717949,
+      "training_time": 1069.3055665493011,
+      "throughput_samples_per_sec": 1365.1116023829923,
+      "peak_memory_mb": 26.1376953125,
+      "total_parameters": 98378,
+      "model_size_mb": 0.37528228759765625
+    },
+    "ViT-small": {
+      "final_test_accuracy": 30.408653846153847,
+      "training_time": 4813.1760041713715,
+      "throughput_samples_per_sec": 312.0564380413027,
+      "peak_memory_mb": 183.80224609375,
+      "total_parameters": 14244490,
+      "model_size_mb": 54.338417053222656
+    }
+  },
+  "recommendations": [
+    "CNN achieves higher accuracy (63.47% vs 30.41%)",
+    "CNN trains faster (1069.31s vs 4813.18s)",
+    "CNN uses less memory (26.14MB vs 183.80MB)",
+    "CNN is more efficient overall (accuracy/time ratio: 0.0594 vs 0.0063)"
+  ]
+}

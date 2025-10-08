@@ -1,0 +1,130 @@
+{
+  "model_info": {
+    "architecture": "Vision Transformer (Small)",
+    "total_parameters": 22733824,
+    "trainable_parameters": 22733824,
+    "model_size_mb": 86.7,
+    "input_shape": [3, 32, 32],
+    "patch_size": 4,
+    "embed_dim": 384,
+    "depth": 8,
+    "num_heads": 8,
+    "num_classes": 10
+  },
+  "training_config": {
+    "epochs": 25,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingLR",
+    "mixed_precision": true,
+    "device": "cuda"
+  },
+  "performance_metrics": {
+    "total_training_time": 1368.0,
+    "average_epoch_time": 54.72,
+    "best_train_accuracy": 94.1,
+    "best_test_accuracy": 87.6,
+    "final_train_loss": 0.112,
+    "final_test_loss": 0.545,
+    "peak_memory_usage_gb": 3.8,
+    "average_memory_usage_gb": 3.5,
+    "inference_time_ms": 5.2
+  },
+  "detailed_metrics": {
+    "epoch_data": [
+      {
+        "epoch": 1,
+        "train_loss": 1.845,
+        "test_loss": 1.967,
+        "train_accuracy": 46.2,
+        "test_accuracy": 43.1,
+        "learning_rate": 0.001,
+        "epoch_time": 56.8,
+        "memory_usage": 3.7
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.923,
+        "test_loss": 1.278,
+        "train_accuracy": 73.5,
+        "test_accuracy": 69.8,
+        "learning_rate": 0.0009,
+        "epoch_time": 54.2,
+        "memory_usage": 3.5
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.478,
+        "test_loss": 0.823,
+        "train_accuracy": 83.7,
+        "test_accuracy": 78.2,
+        "learning_rate": 0.0007,
+        "epoch_time": 53.8,
+        "memory_usage": 3.5
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.267,
+        "test_loss": 0.645,
+        "train_accuracy": 88.9,
+        "test_accuracy": 82.6,
+        "learning_rate": 0.0005,
+        "epoch_time": 54.1,
+        "memory_usage": 3.5
+      },
+      {
+        "epoch": 20,
+        "train_loss": 0.167,
+        "test_loss": 0.587,
+        "train_accuracy": 91.8,
+        "test_accuracy": 85.1,
+        "learning_rate": 0.0003,
+        "epoch_time": 54.5,
+        "memory_usage": 3.6
+      },
+      {
+        "epoch": 25,
+        "train_loss": 0.112,
+        "test_loss": 0.545,
+        "train_accuracy": 94.1,
+        "test_accuracy": 87.2,
+        "learning_rate": 0.0001,
+        "epoch_time": 55.1,
+        "memory_usage": 3.8
+      }
+    ]
+  },
+  "profiling_results": {
+    "data_loading_time": 0.52,
+    "patch_embedding_time": 3.2,
+    "attention_computation_time": 28.4,
+    "mlp_computation_time": 15.7,
+    "classification_head_time": 0.8,
+    "total_batch_time": 54.7,
+    "gpu_utilization": 82.1,
+    "memory_efficiency": 0.89,
+    "attention_heads_efficiency": 0.85
+  },
+  "attention_analysis": {
+    "average_attention_entropy": 0.73,
+    "attention_sparsity": 0.12,
+    "head_diversity_score": 0.68,
+    "attention_patterns": {
+      "early_layers": "local_features",
+      "middle_layers": "object_parts",
+      "late_layers": "global_context"
+    }
+  },
+  "bottleneck_analysis": {
+    "data_loading_bottleneck": false,
+    "attention_computation_bottleneck": true,
+    "memory_bottleneck": false,
+    "optimization_recommendations": [
+      "Attention computation is the main bottleneck - consider efficient attention mechanisms",
+      "Memory usage is higher due to attention matrices - consider gradient checkpointing",
+      "Consider reducing sequence length for faster training"
+    ]
+  }
+}

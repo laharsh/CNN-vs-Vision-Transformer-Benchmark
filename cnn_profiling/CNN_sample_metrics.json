@@ -1,0 +1,114 @@
+{
+  "model_info": {
+    "architecture": "ResNet-18",
+    "total_parameters": 11173962,
+    "trainable_parameters": 11173962,
+    "model_size_mb": 42.7,
+    "input_shape": [3, 32, 32],
+    "num_classes": 10
+  },
+  "training_config": {
+    "epochs": 25,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingLR",
+    "mixed_precision": true,
+    "device": "cuda"
+  },
+  "performance_metrics": {
+    "total_training_time": 738.5,
+    "average_epoch_time": 29.54,
+    "best_train_accuracy": 94.2,
+    "best_test_accuracy": 88.1,
+    "final_train_loss": 0.098,
+    "final_test_loss": 0.523,
+    "peak_memory_usage_gb": 1.8,
+    "average_memory_usage_gb": 1.6,
+    "inference_time_ms": 2.3
+  },
+  "detailed_metrics": {
+    "epoch_data": [
+      {
+        "epoch": 1,
+        "train_loss": 1.823,
+        "test_loss": 1.945,
+        "train_accuracy": 45.2,
+        "test_accuracy": 42.1,
+        "learning_rate": 0.001,
+        "epoch_time": 31.2,
+        "memory_usage": 1.7
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.891,
+        "test_loss": 1.234,
+        "train_accuracy": 72.8,
+        "test_accuracy": 68.9,
+        "learning_rate": 0.0009,
+        "epoch_time": 29.8,
+        "memory_usage": 1.6
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.456,
+        "test_loss": 0.789,
+        "train_accuracy": 84.1,
+        "test_accuracy": 78.5,
+        "learning_rate": 0.0007,
+        "epoch_time": 29.1,
+        "memory_usage": 1.6
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.234,
+        "test_loss": 0.623,
+        "train_accuracy": 89.7,
+        "test_accuracy": 83.2,
+        "learning_rate": 0.0005,
+        "epoch_time": 28.9,
+        "memory_usage": 1.6
+      },
+      {
+        "epoch": 20,
+        "train_loss": 0.156,
+        "test_loss": 0.567,
+        "train_accuracy": 92.3,
+        "test_accuracy": 85.9,
+        "learning_rate": 0.0003,
+        "epoch_time": 29.3,
+        "memory_usage": 1.6
+      },
+      {
+        "epoch": 25,
+        "train_loss": 0.098,
+        "test_loss": 0.523,
+        "train_accuracy": 94.2,
+        "test_accuracy": 87.8,
+        "learning_rate": 0.0001,
+        "epoch_time": 29.7,
+        "memory_usage": 1.8
+      }
+    ]
+  },
+  "profiling_results": {
+    "data_loading_time": 0.45,
+    "forward_pass_time": 12.3,
+    "backward_pass_time": 15.8,
+    "optimizer_step_time": 0.8,
+    "total_batch_time": 29.4,
+    "gpu_utilization": 87.2,
+    "memory_efficiency": 0.92
+  },
+  "bottleneck_analysis": {
+    "data_loading_bottleneck": false,
+    "gpu_compute_bottleneck": false,
+    "memory_bottleneck": false,
+    "optimization_recommendations": [
+      "Consider increasing batch size for better GPU utilization",
+      "Data loading is efficient with current configuration",
+      "Mixed precision training is providing good speedup"
+    ]
+  }
+}

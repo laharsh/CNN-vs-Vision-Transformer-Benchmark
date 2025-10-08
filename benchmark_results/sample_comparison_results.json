@@ -1,0 +1,146 @@
+{
+  "experiment_info": {
+    "timestamp": "2025-01-15T14:30:00Z",
+    "dataset": "CIFAR-10",
+    "num_epochs": 25,
+    "batch_size": 128,
+    "device": "CUDA",
+    "mixed_precision": true
+  },
+  "models": {
+    "CNN_ResNet18": {
+      "architecture": "ResNet-18",
+      "parameters": 11173962,
+      "model_size_mb": 42.7,
+      "training_metrics": {
+        "final_train_accuracy": 94.2,
+        "final_test_accuracy": 87.8,
+        "best_test_accuracy": 88.1,
+        "training_time_minutes": 12.3,
+        "inference_time_ms": 2.3,
+        "memory_usage_gb": 1.8
+      },
+      "learning_curve": {
+        "epochs": [1, 5, 10, 15, 20, 25],
+        "train_loss": [1.823, 0.891, 0.456, 0.234, 0.156, 0.098],
+        "test_loss": [1.945, 1.234, 0.789, 0.623, 0.567, 0.523],
+        "train_accuracy": [45.2, 72.8, 84.1, 89.7, 92.3, 94.2],
+        "test_accuracy": [42.1, 68.9, 78.5, 83.2, 85.9, 87.8]
+      }
+    },
+    "CNN_ResNet50": {
+      "architecture": "ResNet-50",
+      "parameters": 25557032,
+      "model_size_mb": 97.5,
+      "training_metrics": {
+        "final_train_accuracy": 95.8,
+        "final_test_accuracy": 89.4,
+        "best_test_accuracy": 89.7,
+        "training_time_minutes": 18.7,
+        "inference_time_ms": 4.1,
+        "memory_usage_gb": 3.2
+      },
+      "learning_curve": {
+        "epochs": [1, 5, 10, 15, 20, 25],
+        "train_loss": [1.756, 0.834, 0.398, 0.201, 0.134, 0.087],
+        "test_loss": [1.892, 1.156, 0.712, 0.578, 0.523, 0.489],
+        "train_accuracy": [48.7, 75.3, 86.9, 91.4, 93.8, 95.8],
+        "test_accuracy": [45.2, 71.8, 81.2, 85.7, 87.9, 89.4]
+      }
+    },
+    "ViT_Tiny": {
+      "architecture": "Vision Transformer (Tiny)",
+      "parameters": 5683458,
+      "model_size_mb": 21.7,
+      "training_metrics": {
+        "final_train_accuracy": 91.5,
+        "final_test_accuracy": 84.3,
+        "best_test_accuracy": 84.8,
+        "training_time_minutes": 15.2,
+        "inference_time_ms": 3.7,
+        "memory_usage_gb": 2.1
+      },
+      "learning_curve": {
+        "epochs": [1, 5, 10, 15, 20, 25],
+        "train_loss": [1.934, 1.023, 0.567, 0.345, 0.234, 0.178],
+        "test_loss": [2.012, 1.389, 0.923, 0.745, 0.678, 0.634],
+        "train_accuracy": [42.8, 69.1, 79.4, 85.2, 88.7, 91.5],
+        "test_accuracy": [39.5, 65.2, 74.8, 79.1, 82.3, 84.3]
+      }
+    },
+    "ViT_Small": {
+      "architecture": "Vision Transformer (Small)",
+      "parameters": 22733824,
+      "model_size_mb": 86.7,
+      "training_metrics": {
+        "final_train_accuracy": 94.1,
+        "final_test_accuracy": 87.2,
+        "best_test_accuracy": 87.6,
+        "training_time_minutes": 22.8,
+        "inference_time_ms": 5.2,
+        "memory_usage_gb": 3.8
+      },
+      "learning_curve": {
+        "epochs": [1, 5, 10, 15, 20, 25],
+        "train_loss": [1.845, 0.923, 0.478, 0.267, 0.167, 0.112],
+        "test_loss": [1.967, 1.278, 0.823, 0.645, 0.587, 0.545],
+        "train_accuracy": [46.2, 73.5, 83.7, 88.9, 91.8, 94.1],
+        "test_accuracy": [43.1, 69.8, 78.2, 82.6, 85.1, 87.2]
+      }
+    },
+    "ViT_Base": {
+      "architecture": "Vision Transformer (Base)",
+      "parameters": 86432256,
+      "model_size_mb": 329.7,
+      "training_metrics": {
+        "final_train_accuracy": 96.3,
+        "final_test_accuracy": 89.8,
+        "best_test_accuracy": 90.2,
+        "training_time_minutes": 35.4,
+        "inference_time_ms": 8.9,
+        "memory_usage_gb": 6.2
+      },
+      "learning_curve": {
+        "epochs": [1, 5, 10, 15, 20, 25],
+        "train_loss": [1.723, 0.789, 0.367, 0.189, 0.123, 0.082],
+        "test_loss": [1.845, 1.134, 0.698, 0.556, 0.498, 0.467],
+        "train_accuracy": [49.8, 76.9, 87.2, 92.1, 94.6, 96.3],
+        "test_accuracy": [46.7, 73.2, 82.4, 86.8, 88.5, 89.8]
+      }
+    }
+  },
+  "comparison_summary": {
+    "best_accuracy": {
+      "model": "ViT_Base",
+      "accuracy": 90.2
+    },
+    "fastest_training": {
+      "model": "CNN_ResNet18",
+      "time_minutes": 12.3
+    },
+    "most_efficient": {
+      "model": "ViT_Tiny",
+      "accuracy_per_param": 0.0149
+    },
+    "lowest_memory": {
+      "model": "CNN_ResNet18",
+      "memory_gb": 1.8
+    }
+  },
+  "performance_analysis": {
+    "cnn_vs_vit": {
+      "cnn_avg_accuracy": 88.6,
+      "vit_avg_accuracy": 87.1,
+      "cnn_avg_training_time": 15.5,
+      "vit_avg_training_time": 24.5,
+      "cnn_avg_memory": 2.5,
+      "vit_avg_memory": 4.0
+    },
+    "efficiency_metrics": {
+      "cnn_accuracy_per_param": 0.0042,
+      "vit_accuracy_per_param": 0.0038,
+      "cnn_speed_advantage": 1.58,
+      "vit_memory_overhead": 1.6
+    }
+  }
+}
