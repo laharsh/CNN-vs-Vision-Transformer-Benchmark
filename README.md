@@ -6,6 +6,8 @@ This project implements both CNN and Vision Transformer (ViT) models from scratc
 
 ## 🚀 Distributed Training Results: 11.7x ViT Speedup via NCCL Backend Optimization
 
+Implemented distributed multi-GPU benchmark using PyTorch DDP (torch.distributed) with NCCL backend, achieving **1.87x wall-clock speedup** and **87% parallel efficiency** by training CNN and ViT models concurrently on separate GPUs
+
 ![Training Results](benchmark_results/DDP%20Benchmark%20Results/Significant%20Performance%20after%20using%20Pytorch%20DDP%20with%20Multi%20GPU.png)
 
 ## 🚀 DDP Multi-GPU Performance Results
