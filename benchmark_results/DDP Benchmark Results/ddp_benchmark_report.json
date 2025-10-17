@@ -1,0 +1,42 @@
+{
+  "ddp_configuration": {
+    "world_size": 2,
+    "backend": "nccl",
+    "num_gpus_used": 2,
+    "ranks": [
+      0,
+      1
+    ],
+    "execution_mode": "DDP_multi_process"
+  },
+  "performance_comparison": {
+    "CNN": {
+      "rank": 0,
+      "gpu_id": 0,
+      "accuracy": 66.77684294871794,
+      "training_time": 356.04341650009155,
+      "throughput": 4658.690144752921,
+      "memory_mb": 26.13818359375,
+      "parameters": 98378
+    },
+    "ViT-small": {
+      "rank": 1,
+      "gpu_id": 1,
+      "accuracy": 28.846153846153847,
+      "training_time": 407.4913549423218,
+      "throughput": 3943.870599774666,
+      "memory_mb": 182.4130859375,
+      "parameters": 14244490
+    }
+  },
+  "recommendations": [
+    "\u2705 DDP achieved 1.87x speedup through parallel execution",
+    "\ud83d\udcbe Memory distributed: CNN (26MB on GPU 0), ViT (182MB on GPU 1)"
+  ],
+  "ddp_metrics": {
+    "sequential_time": 763.5347714424133,
+    "parallel_time": 407.4913549423218,
+    "speedup": 1.8737447118368624,
+    "time_saved": 356.04341650009155
+  }
+}
