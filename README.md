@@ -2,7 +2,7 @@
 
 This project implements both CNN and Vision Transformer (ViT) models from scratch and benchmarks their performance across multiple metrics: accuracy, training speed, memory usage, and throughput.
 
-## 📊 Significant Performance Increase after training with Pytorch DDP Multi GPU
+## 🚀 Distributed Training Results: 11.7x ViT Speedup via NCCL Backend Optimization
 
 ![Training Results](benchmark_results/DDP%20Benchmark%20Results/Significant%20Performance%20after%20using%20Pytorch%20DDP%20with%20Multi%20GPU.png)
 
